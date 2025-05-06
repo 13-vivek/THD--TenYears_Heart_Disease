@@ -1,0 +1,79 @@
+# Load necessary libraries
+library(readr)
+library(randomForest)
+library(caret)
+
+# Load the data set
+crime_data <- read_csv("crime_dataset_india.csv")
+
+# Data Preprocessing
+crime_data_model <- subset(crime_data, select = -c(`Report Number`, `Date Reported`,
+                                                   `Date of Occurrence`, `Time of Occurrence`,
+                                                   `Date Case Closed`, `Case Closed`))
+
+# Convert Crime Domain to binary (0 and 1)
+crime_data_model$`Crime Domain` <- ifelse(crime_data_model$`Crime Domain` == "Violent Crime", 1, 0)
+
+# Convert character columns to factors
+crime_data_model$City <- as.factor(crime_data_model$City)
+crime_data_model$`Crime Description` <- as.factor(crime_data_model$`Crime Description`)
+crime_data_model$`Victim Gender` <- as.factor(crime_data_model$`Victim Gender`)
+crime_data_model$`Weapon Used` <- as.factor(crime_data_model$`Weapon Used`)
+
+# Convert factors to numeric (preserving levels)
+crime_data_model$City <- as.numeric(crime_data_model$City)
+crime_data_model$`Crime Description` <- as.numeric(crime_data_model$`Crime Description`)
+crime_data_model$`Victim Gender` <- as.numeric(crime_data_model$`Victim Gender`)
+crime_data_model$`Weapon Used` <- as.numeric(crime_data_model$`Weapon Used`)
+crime_data_model$`Police Deployed` <- as.numeric(crime_data_model$`Police Deployed`)
+
+# Data Splitting (reproducible)
+set.seed(123)
+train_index <- sample(1:nrow(crime_data_model), 0.8 * nrow(crime_data_model))
+train_data <- crime_data_model[train_index, ]
+test_data <- crime_data_model[-train_index, ]
+
+# Prepare Data for randomForest
+train_data$`Crime Domain` <- as.factor(train_data$`Crime Domain`)
+test_data$`Crime Domain` <- as.factor(test_data$`Crime Domain`)
+
+# Train randomForest Model
+rf_model <- randomForest(`Crime Domain` ~ ., data = train_data, ntree = 500)
+
+# Evaluate Model
+predictions <- predict(rf_model, test_data, type = "class")
+
+# Confusion Matrix (essential)
+conf_matrix <- confusionMatrix(predictions, test_data$`Crime Domain`)
+print(conf_matrix)
+
+# Feature Importance (validate inputs)
+importance_matrix <- importance(rf_model)
+print(importance_matrix)
+
+# ----------------------------------------------------------------------------
+# PREDICTING NEW DATA
+# ----------------------------------------------------------------------------
+
+# New data - needs to be preprocessed exactly like training data
+new_tuple <- data.frame(
+  City = as.numeric(factor("Bangalore", levels = levels(as.factor(train_data$City)))),
+  `Crime Code` = 369,
+  `Crime Description` = as.numeric(factor("EXTORTION", levels = levels(as.factor(train_data$`Crime Description`)))),
+  `Victim Age` = 62,
+  `Victim Gender` = as.numeric(factor("F", levels = levels(as.factor(train_data$`Victim Gender`)))),
+  `Weapon Used` = as.numeric(factor("Blunt Object", levels = levels(as.factor(train_data$`Weapon Used`)))),
+  `Police Deployed` = 2
+)
+
+# Convert the new tuple to data frame
+new_tuple_df <- as.data.frame(new_tuple)
+
+# Correct column naming
+colnames(new_tuple_df) <- names(train_data)[!names(train_data) %in% "Crime Domain"] # Ensure correct column names
+
+# Predict using the trained randomForest model
+new_prediction <- predict(rf_model, newdata = new_tuple_df, type = "class")
+
+# Output the result
+print(paste("Predicted Crime Domain:", new_prediction))

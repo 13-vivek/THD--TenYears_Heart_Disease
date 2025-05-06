@@ -1,0 +1,20 @@
+library(ggplot2)
+library(dplyr)
+
+install.packages("dplyr")
+install.packages("ggplot2")
+
+set.seed(123)
+data(mtcars)
+head(mtcars)
+
+ggplot(data = mtcars, aes(x = hp, y = mpg, col = disp))+
+  labs(title = "MTCars Data Plot")
+
+ggplot(data = mtcars,aes(x = hp , y = mpg))+
+  geom_line()+
+  labs(title = "lineplot" , xlab("x_axis"), ylab("yaxis"))
+
+ggplot(mtcars, aes(x =hp, y = mpg)) +
+  geom_point(alpha = 1) +
+  labs(title = "Bubble Plot", x = "X", y = "Y")

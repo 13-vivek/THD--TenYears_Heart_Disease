@@ -1,0 +1,72 @@
+library(shiny)
+library(shinythemes)
+library(randomForest)
+library(ggplot2)
+
+# UI Defined 
+ui <- fluidPage(
+  theme = shinytheme("united"),
+  navbarPage(
+    "CORONARY HEART DISEASE",
+    
+    # Tab 1
+    tabPanel("Tab 1",
+             mainPanel(
+               tags$h3("Register to GFG:"),
+               textInput("txt1", "Name:", ""),
+               textInput("txt2", "Surname:", ""),
+               textInput("txt3", "Email:", ""),
+               textInput("txt4", "Mobile.No:", ""),
+               textInput("txt5", "Education:", ""),
+               textInput("txt6", "College:", ""),
+               textInput("txt7", "Programming Language:", ""),
+               textInput("txt8", "Area of Interest:", ""),
+               hr(),
+               h4("Here are your details:"),
+               verbatimTextOutput("txtout")
+             )),
+    
+    # Tab 2
+    tabPanel("tab2",
+             h3("Hello! Here is the Plot Graph, Slider, Dropdown, and Date Picker!"))
+  ),
+  
+  hr(),
+  
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput("slider", "Select a value:", min = 10, max = 500, value = 125),
+      selectInput("dropdown", "Select an option:", c("Python", "JAVA", "C++")),
+      dateInput("datepicker", "Select a date:")
+    ),
+    
+    mainPanel(
+      plotOutput("plot"),  # Plot Graph
+      h3("Selected values:"),
+      textOutput("selected_value"),
+      textOutput("selected_option"),
+      textOutput("selected_date")
+    )
+  )
+)
+
+# Server Function 
+server <- function(input, output) {
+  output$selected_value <- renderText({ input$slider })
+  output$selected_option <- renderText({ input$dropdown })
+  output$selected_date <- renderText({ input$datepicker }) # Fixed incorrect ID
+  
+  output$txtout <- renderText({
+    paste(input$txt1, input$txt2,
+          input$txt3, input$txt4, input$txt5,
+          input$txt6, input$txt7, input$txt8,
+          sep = " ")
+  })
+  
+  output$plot <- renderPlot({
+    ggplot(mtcars, aes(x = wt, y = mpg)) + geom_point()
+  })
+}
+
+# Run App 
+shinyApp(ui = ui, server = server)

@@ -1,0 +1,173 @@
+# Load necessary libraries
+
+library(readr)  # For reading CSV files
+
+# Load the data set
+crime_data <- read_csv("crime_dataset_india.csv")
+
+# View the first few rows to check if it's loaded correctly
+head(crime_data)
+
+colSums(is.na(crime_data))  # Shows count of missing values per column
+
+# Keep a copy of the original dataset for visualization later
+crime_data_original <- crime_data  
+
+# Drop unnecessary columns for classification
+crime_data_model <- subset(crime_data, select = -c(`Report Number`, `Date Reported`, 
+                                                   `Date of Occurrence`, `Time of Occurrence`, 
+                                                   `Date Case Closed`, `Case Closed`))
+str(crime_data_model)  # Show the structure of the dataset
+
+crime_data_model$`Crime Domain` <- ifelse(crime_data_model$`Crime Domain` == "Violent Crime", 1, 0)
+
+crime_data_model$`City` <- as.factor(crime_data_model$`City`)
+crime_data_model$`Crime Description` <- as.factor(crime_data_model$`Crime Description`)
+crime_data_model$`Victim Gender` <- as.factor(crime_data_model$`Victim Gender`)
+crime_data_model$`Weapon Used` <- as.factor(crime_data_model$`Weapon Used`)
+
+crime_data_model$`City` <- as.numeric(crime_data_model$`City`)
+crime_data_model$`Crime Description` <- as.numeric(crime_data_model$`Crime Description`)
+crime_data_model$`Victim Gender` <- as.numeric(crime_data_model$`Victim Gender`)
+crime_data_model$`Weapon Used` <- as.numeric(crime_data_model$`Weapon Used`)
+
+
+
+#installing packages for data splitting training and testing 
+install.packages("caTools")
+# loading the library 
+library(caTools)
+
+set.seed(123)  # Ensures reproducibility
+
+# Get total row count
+total_rows <- nrow(crime_data_model)
+
+# Create a shuffled sequence of row indices
+shuffled_indices <- sample(total_rows)
+
+# Define split point (80% training, 20% testing)
+split_point <- round(0.8 * total_rows)
+
+# Assign indices for training and testing sets
+train_indices <- shuffled_indices[1:split_point]
+test_indices <- shuffled_indices[(split_point + 1):total_rows]
+
+# Create datasets using indices (no overlap possible)
+train_data <- crime_data_model[train_indices, , drop = FALSE]
+test_data <- crime_data_model[test_indices, , drop = FALSE]
+
+# Verify no overlap
+overlap <- intersect(train_indices, test_indices)
+
+if (length(overlap) == 0) {
+  print("✅ No overlapping rows found. Data split is correct!")
+} else {
+  print(paste("❌ Overlap detected! Number of overlapping rows:", length(overlap)))
+}
+
+# training xgboost model 
+install.packages("xgboost")
+library(xgboost)
+
+# Convert Data to Matrix
+train_matrix <- as.matrix(subset(train_data, select = -`Crime Domain`))
+test_matrix <- as.matrix(subset(test_data, select = -`Crime Domain`))
+
+# Define Target Variable (Labels)
+train_labels <- train_data$`Crime Domain`
+test_labels <- test_data$`Crime Domain`
+
+
+# Convert training and testing data to DMatrix
+dtrain <- xgb.DMatrix(data = train_matrix, label = train_labels)
+dtest <- xgb.DMatrix(data = test_matrix, label = test_labels)  # For evaluation
+
+params <- list(
+  objective = "binary:logistic",
+  eval_metric = "error",
+  max_depth = 6,
+  min_child_weight = 1,
+  subsample = 0.8,
+  colsample_bytree = 0.8,
+  eta = 0.01,
+  lambda = 0.5,
+  alpha = 0.1
+)
+
+xgb_model <- xgb.train(
+  params = params,
+  data = dtrain,
+  nrounds = 300,
+  early_stopping_rounds = 20,
+  watchlist = list(train = dtrain, test = dtest)
+)
+
+# Generate predictions
+predictions <- predict(xgb_model, test_matrix)
+
+# Convert probabilities to class labels (0 or 1)
+predicted_classes <- ifelse(predictions > 0.5, 1, 0)
+
+# Calculate accuracy
+accuracy <- sum(predicted_classes == test_labels) / length(test_labels)
+
+# Print accuracy
+print(paste("Model Accuracy:", round(accuracy * 100, 2), "%"))
+
+
+
+# =========================================================
+
+library(xgboost)
+
+# Make sure 'Police.Deployed' column is numeric
+train_data$`Police Deployed` <- as.numeric(train_data$`Police Deployed`)
+
+# Ensure the new input tuple matches the preprocessed format
+# Replace values below with your actual input values
+new_tuple <- data.frame(
+  City = as.numeric(factor("Delhi", levels = levels(as.factor(train_data$City)))),
+  `Crime Code` = 197, # Numeric value (e.g., Crime Code for ASSAULT)
+  `Crime Description` = as.numeric(factor("BURGLARY", levels = levels(as.factor(train_data$`Crime Description`)))),
+  `Victim Age` = 61, # Numeric value for victim's age
+  `Victim Gender` = as.numeric(factor("F", levels = levels(as.factor(train_data$`Victim Gender`)))),
+  `Weapon Used` = as.numeric(factor("KNIFE", levels = levels(as.factor(train_data$`Weapon Used`)))),
+  `Police Deployed` = 40 # Numeric value representing the number of police deployed
+)
+
+# Ensure column names match exactly with training data feature names
+colnames(new_tuple) <- colnames(train_matrix)
+
+# Convert the new tuple to matrix format (required by xgboost)
+new_tuple_matrix <- as.matrix(new_tuple)
+
+# Predict using the trained XGBoost model
+new_prediction <- predict(xgb_model, new_tuple_matrix)
+
+# Convert probability to class label (0 for nonviolent, 1 for violent)
+predicted_class <- ifelse(new_prediction > 0.5, "Violent Crime", "Nonviolent Crime")
+
+# Output the result
+print(paste("Predicted Crime Domain:", predicted_class))
+
+print(new_prediction)
+
+
+
+hist(predictions, breaks = 30, col = "blue", main = "Distribution of Predictions",
+     xlab = "Predicted Probability", ylab = "Frequency", border = "white")
+
+
+
+
+
+
+
+
+
+
+
+
+
+

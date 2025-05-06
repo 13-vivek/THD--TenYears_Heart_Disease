@@ -1,0 +1,2125 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0313.2002                               -->
+<workbook original-version='18.1' source-build='2025.1.0 (20251.25.0313.2002)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Cholesterol Limit' datatype='integer' name='[Tot Chol Parameter]' param-domain-type='range' role='measure' type='quantitative' value='247'>
+        <calculation class='tableau' formula='247' />
+        <range granularity='10' max='696' min='107' />
+      </column>
+    </datasource>
+    <datasource caption='dataset-framingham-heart-study' inline='true' name='federated.0akp0qs13baed51dunbpz1brc1w1' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='dataset-framingham-heart-study' name='textscan.1mxs4140foevvx11v7eot14g7414'>
+            <connection class='textscan' directory='W:/r-project' filename='dataset-framingham-heart-study.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1mxs4140foevvx11v7eot14g7414' name='dataset-framingham-heart-study.csv' table='[dataset-framingham-heart-study#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='male' ordinal='0' />
+            <column datatype='integer' name='age' ordinal='1' />
+            <column datatype='integer' name='education' ordinal='2' />
+            <column datatype='integer' name='currentSmoker' ordinal='3' />
+            <column datatype='integer' name='cigsPerDay' ordinal='4' />
+            <column datatype='integer' name='BPMeds' ordinal='5' />
+            <column datatype='integer' name='prevalentStroke' ordinal='6' />
+            <column datatype='integer' name='prevalentHyp' ordinal='7' />
+            <column datatype='integer' name='diabetes' ordinal='8' />
+            <column datatype='integer' name='totChol' ordinal='9' />
+            <column datatype='real' name='sysBP' ordinal='10' />
+            <column datatype='real' name='diaBP' ordinal='11' />
+            <column datatype='real' name='BMI' ordinal='12' />
+            <column datatype='integer' name='heartRate' ordinal='13' />
+            <column datatype='string' name='glucose' ordinal='14' />
+            <column datatype='integer' name='TenYearCHD' ordinal='15' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[dataset-framingham-heart-study.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='record-delimiter'>&quot;\\r&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>male</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[male]</local-name>
+            <parent-name>[dataset-framingham-heart-study.csv]</parent-name>
+            <remote-alias>male</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[dataset-framingham-heart-study.csv]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>education</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[education]</local-name>
+            <parent-name>[dataset-framingham-heart-study.csv]</parent-name>
+            <remote-alias>education</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>currentSmoker</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[currentSmoker]</local-name>
+            <parent-name>[dataset-framingham-heart-study.csv]</parent-name>
+            <remote-alias>currentSmoker</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cigsPerDay</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cigsPerDay]</local-name>
+            <parent-name>[dataset-framingham-heart-study.csv]</parent-name>
+            <remote-alias>cigsPerDay</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BPMeds</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BPMeds]</local-name>
+            <parent-name>[dataset-framingham-heart-study.csv]</parent-name>
+            <remote-alias>BPMeds</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prevalentStroke</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[prevalentStroke]</local-name>
+            <parent-name>[dataset-framingham-heart-study.csv]</parent-name>
+            <remote-alias>prevalentStroke</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prevalentHyp</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[prevalentHyp]</local-name>
+            <parent-name>[dataset-framingham-heart-study.csv]</parent-name>
+            <remote-alias>prevalentHyp</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>diabetes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[diabetes]</local-name>
+            <parent-name>[dataset-framingham-heart-study.csv]</parent-name>
+            <remote-alias>diabetes</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>totChol</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[totChol]</local-name>
+            <parent-name>[dataset-framingham-heart-study.csv]</parent-name>
+            <remote-alias>totChol</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sysBP</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sysBP]</local-name>
+            <parent-name>[dataset-framingham-heart-study.csv]</parent-name>
+            <remote-alias>sysBP</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>diaBP</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[diaBP]</local-name>
+            <parent-name>[dataset-framingham-heart-study.csv]</parent-name>
+            <remote-alias>diaBP</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BMI</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[BMI]</local-name>
+            <parent-name>[dataset-framingham-heart-study.csv]</parent-name>
+            <remote-alias>BMI</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>heartRate</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[heartRate]</local-name>
+            <parent-name>[dataset-framingham-heart-study.csv]</parent-name>
+            <remote-alias>heartRate</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>glucose</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[glucose]</local-name>
+            <parent-name>[dataset-framingham-heart-study.csv]</parent-name>
+            <remote-alias>glucose</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TenYearCHD</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TenYearCHD]</local-name>
+            <parent-name>[dataset-framingham-heart-study.csv]</parent-name>
+            <remote-alias>TenYearCHD</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='None' datatype='integer' name='[Age (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='0' formula='[age]' peg='0' size='3.3' />
+      </column>
+      <column caption='BP Meds' datatype='integer' name='[BPMeds]' role='measure' type='quantitative' />
+      <column caption='Gender' datatype='string' name='[Calculation_700872757516693506]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [male] = 1 THEN &quot;Male&quot; ELSE &quot;Female&quot; END' />
+      </column>
+      <column caption='High Blood Pressure' datatype='string' name='[Calculation_700872757524488195]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [sysBP] &gt; 140 OR [diaBP] &gt; 90 THEN &quot;Yes&quot; ELSE &quot;No&quot; END' />
+      </column>
+      <column caption='BMI Category' datatype='string' name='[Calculation_700872757525819396]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [BMI] &lt; 18.5 THEN &quot;Underweight&quot;&#13;&#10;ELSEIF [BMI] &lt; 25 THEN &quot;Normal&quot;&#13;&#10;ELSEIF [BMI] &lt; 30 THEN &quot;Overweight&quot;&#13;&#10;ELSE &quot;Obese&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Age Group' datatype='string' name='[Calculation_700872757529178117]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [age] &lt; 40 THEN &quot;20-39&quot;&#13;&#10;ELSEIF [age] &gt;= 40 AND [age] &lt; 60 THEN &quot;40-59&quot;&#13;&#10;ELSE &quot;60+&quot;&#13;&#10;END' />
+      </column>
+      <column caption='High Cholesterol' datatype='string' name='[Calculation_700872757532114952]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [totChol] &gt; [Parameters].[Tot Chol Parameter] THEN &quot;NORMAL&quot; ELSE &quot;HIGH&quot; END' />
+      </column>
+      <column caption='Ten Year CHD' datatype='integer' name='[TenYearCHD]' role='measure' type='quantitative' />
+      <column caption='dataset-framingham-heart-study.csv' datatype='table' name='[__tableau_internal_object_id__].[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]' role='measure' type='quantitative' />
+      <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+      <column caption='Avg Heart Disease Rate' datatype='real' name='[avg_heart_disease_rate]' role='measure' type='quantitative' />
+      <column caption='Cigs Per Day' datatype='integer' name='[cigsPerDay]' role='dimension' type='quantitative' />
+      <column caption='Current Smoker' datatype='integer' name='[currentSmoker]' role='measure' type='quantitative' />
+      <column caption='Dia BP' datatype='real' name='[diaBP]' role='measure' type='quantitative' />
+      <column caption='Diabetes' datatype='integer' name='[diabetes]' role='measure' type='quantitative' />
+      <column caption='Education' datatype='integer' name='[education]' role='measure' type='quantitative' />
+      <column caption='Glucose' datatype='string' name='[glucose]' role='dimension' type='nominal' />
+      <column caption='Heart Rate' datatype='integer' name='[heartRate]' role='measure' type='quantitative' />
+      <column caption='Male' datatype='integer' name='[male]' role='measure' type='quantitative' />
+      <column caption='Prevalent Hyp' datatype='integer' name='[prevalentHyp]' role='measure' type='quantitative' />
+      <column caption='Prevalent Stroke' datatype='integer' name='[prevalentStroke]' role='measure' type='quantitative' />
+      <column caption='Sys BP' datatype='real' name='[sysBP]' role='measure' type='quantitative' />
+      <column caption='Tot Chol' datatype='integer' name='[totChol]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_700872757516693506]' derivation='Attribute' name='[attr:Calculation_700872757516693506:nk]' pivot='key' type='nominal' />
+      <column-instance column='[cigsPerDay]' derivation='Avg' name='[avg:cigsPerDay:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[heartRate]' derivation='Avg' name='[avg:heartRate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_700872757516693506]' derivation='None' name='[none:Calculation_700872757516693506:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_700872757532114952]' derivation='None' name='[none:Calculation_700872757532114952:nk]' pivot='key' type='nominal' />
+      <column-instance column='[male]' derivation='None' name='[none:male:ok]' pivot='key' type='ordinal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Vivek/AppData/Local/Temp/TableauTemp/#TableauTemp_1m1yrcr01wokdw1h8phub1h8vfpv.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='04/08/2025 07:55:44 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>male</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[male]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>male</remote-alias>
+              <ordinal>0</ordinal>
+              <family>dataset-framingham-heart-study.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>age</remote-alias>
+              <ordinal>1</ordinal>
+              <family>dataset-framingham-heart-study.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>40</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>education</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[education]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>education</remote-alias>
+              <ordinal>2</ordinal>
+              <family>dataset-framingham-heart-study.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>currentSmoker</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[currentSmoker]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>currentSmoker</remote-alias>
+              <ordinal>3</ordinal>
+              <family>dataset-framingham-heart-study.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cigsPerDay</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[cigsPerDay]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cigsPerDay</remote-alias>
+              <ordinal>4</ordinal>
+              <family>dataset-framingham-heart-study.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>30</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BPMeds</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[BPMeds]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BPMeds</remote-alias>
+              <ordinal>5</ordinal>
+              <family>dataset-framingham-heart-study.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>prevalentStroke</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[prevalentStroke]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>prevalentStroke</remote-alias>
+              <ordinal>6</ordinal>
+              <family>dataset-framingham-heart-study.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>prevalentHyp</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[prevalentHyp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>prevalentHyp</remote-alias>
+              <ordinal>7</ordinal>
+              <family>dataset-framingham-heart-study.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>diabetes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[diabetes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>diabetes</remote-alias>
+              <ordinal>8</ordinal>
+              <family>dataset-framingham-heart-study.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>totChol</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[totChol]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>totChol</remote-alias>
+              <ordinal>9</ordinal>
+              <family>dataset-framingham-heart-study.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>217</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sysBP</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[sysBP]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sysBP</remote-alias>
+              <ordinal>10</ordinal>
+              <family>dataset-framingham-heart-study.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>221</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>diaBP</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[diaBP]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>diaBP</remote-alias>
+              <ordinal>11</ordinal>
+              <family>dataset-framingham-heart-study.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>135</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BMI</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[BMI]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BMI</remote-alias>
+              <ordinal>12</ordinal>
+              <family>dataset-framingham-heart-study.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1157</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>heartRate</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[heartRate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>heartRate</remote-alias>
+              <ordinal>13</ordinal>
+              <family>dataset-framingham-heart-study.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>67</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>glucose</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[glucose]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>glucose</remote-alias>
+              <ordinal>14</ordinal>
+              <family>dataset-framingham-heart-study.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>115</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TenYearCHD</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TenYearCHD]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TenYearCHD</remote-alias>
+              <ordinal>15</ordinal>
+              <family>dataset-framingham-heart-study.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[attr:Calculation_700872757516693506:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Male&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Female&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:male:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>0</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0akp0qs13baed51dunbpz1brc1w1].[avg:cigsPerDay:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0akp0qs13baed51dunbpz1brc1w1].[avg:heartRate:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_700872757532114952:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;HIGH&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;NORMAL&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_700872757516693506:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Male&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Female&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='male' />
+        <field-sort-custom-order field='Calculation_700872757516693506' />
+        <field-sort-custom-order field='Calculation_700872757516521472' />
+        <field-sort-custom-order field='age' />
+        <field-sort-custom-order field='Age (copy)_700872757552459785' />
+        <field-sort-custom-order field='Calculation_700872757529178117' />
+        <field-sort-custom-order field='education' />
+        <field-sort-custom-order field='currentSmoker' />
+        <field-sort-custom-order field='cigsPerDay' />
+        <field-sort-custom-order field='BPMeds' />
+        <field-sort-custom-order field='prevalentStroke' />
+        <field-sort-custom-order field='prevalentHyp' />
+        <field-sort-custom-order field='diabetes' />
+        <field-sort-custom-order field='totChol' />
+        <field-sort-custom-order field='Calculation_700872757532114952' />
+        <field-sort-custom-order field='sysBP' />
+        <field-sort-custom-order field='Calculation_700872757524488195' />
+        <field-sort-custom-order field='diaBP' />
+        <field-sort-custom-order field='BMI' />
+        <field-sort-custom-order field='Calculation_700872757525819396' />
+        <field-sort-custom-order field='heartRate' />
+        <field-sort-custom-order field='glucose' />
+        <field-sort-custom-order field='TenYearCHD' />
+        <field-sort-custom-order field='Age (bin)' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Cholesterol Limit' datatype='integer' name='[Tot Chol Parameter]' param-domain-type='range' role='measure' type='quantitative' value='247'>
+          <calculation class='tableau' formula='247' />
+          <range granularity='10' max='696' min='107' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='dataset-framingham-heart-study.csv' id='dataset-framingham-heart-study.csv_251BB261937446659082BA725F598F7D'>
+            <properties context=''>
+              <relation connection='textscan.1mxs4140foevvx11v7eot14g7414' name='dataset-framingham-heart-study.csv' table='[dataset-framingham-heart-study#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='male' ordinal='0' />
+                  <column datatype='integer' name='age' ordinal='1' />
+                  <column datatype='integer' name='education' ordinal='2' />
+                  <column datatype='integer' name='currentSmoker' ordinal='3' />
+                  <column datatype='integer' name='cigsPerDay' ordinal='4' />
+                  <column datatype='integer' name='BPMeds' ordinal='5' />
+                  <column datatype='integer' name='prevalentStroke' ordinal='6' />
+                  <column datatype='integer' name='prevalentHyp' ordinal='7' />
+                  <column datatype='integer' name='diabetes' ordinal='8' />
+                  <column datatype='integer' name='totChol' ordinal='9' />
+                  <column datatype='real' name='sysBP' ordinal='10' />
+                  <column datatype='real' name='diaBP' ordinal='11' />
+                  <column datatype='real' name='BMI' ordinal='12' />
+                  <column datatype='integer' name='heartRate' ordinal='13' />
+                  <column datatype='string' name='glucose' ordinal='14' />
+                  <column datatype='integer' name='TenYearCHD' ordinal='15' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='2nd grouping filtering (Q2.1)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Grouping Filter</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dataset-framingham-heart-study' name='federated.0akp0qs13baed51dunbpz1brc1w1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0akp0qs13baed51dunbpz1brc1w1'>
+            <column caption='Gender' datatype='string' name='[Calculation_700872757516693506]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [male] = 1 THEN &quot;Male&quot; ELSE &quot;Female&quot; END' />
+            </column>
+            <column caption='Ten Year CHD' datatype='integer' name='[TenYearCHD]' role='measure' type='quantitative' />
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[TenYearCHD]' derivation='Count' name='[cnt:TenYearCHD:qk]' pivot='key' type='quantitative' />
+            <column caption='Male' datatype='integer' name='[male]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_700872757516693506]' derivation='None' name='[none:Calculation_700872757516693506:nk]' pivot='key' type='nominal' />
+            <column-instance column='[age]' derivation='None' name='[none:age:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:age:qk]' included-values='in-range'>
+            <min>32</min>
+            <max>62</max>
+          </filter>
+          <slices>
+            <column>[federated.0akp0qs13baed51dunbpz1brc1w1].[none:age:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757516693506:nk]' value='180' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757516693506:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a7' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0akp0qs13baed51dunbpz1brc1w1].[cnt:TenYearCHD:qk]</rows>
+        <cols>[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757516693506:nk]</cols>
+      </table>
+      <simple-id uuid='{BD8A8388-E02B-4C69-AD17-E417C13CDCEB}' />
+    </worksheet>
+    <worksheet name='Q2.2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dataset-framingham-heart-study' name='federated.0akp0qs13baed51dunbpz1brc1w1' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Cholesterol Limit' datatype='integer' name='[Tot Chol Parameter]' param-domain-type='range' role='measure' type='quantitative' value='247'>
+              <calculation class='tableau' formula='247' />
+              <range granularity='10' max='696' min='107' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0akp0qs13baed51dunbpz1brc1w1'>
+            <column caption='Gender' datatype='string' name='[Calculation_700872757516693506]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [male] = 1 THEN &quot;Male&quot; ELSE &quot;Female&quot; END' />
+            </column>
+            <column caption='Age Group' datatype='string' name='[Calculation_700872757529178117]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [age] &lt; 40 THEN &quot;20-39&quot;&#13;&#10;ELSEIF [age] &gt;= 40 AND [age] &lt; 60 THEN &quot;40-59&quot;&#13;&#10;ELSE &quot;60+&quot;&#13;&#10;END' />
+            </column>
+            <column caption='High Cholesterol' datatype='string' name='[Calculation_700872757532114952]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [totChol] &gt; [Parameters].[Tot Chol Parameter] THEN &quot;NORMAL&quot; ELSE &quot;HIGH&quot; END' />
+            </column>
+            <column caption='Ten Year CHD' datatype='integer' name='[TenYearCHD]' role='measure' type='quantitative' />
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[TenYearCHD]' derivation='Count' name='[cnt:TenYearCHD:qk]' pivot='key' type='quantitative' />
+            <column caption='Male' datatype='integer' name='[male]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_700872757516693506]' derivation='None' name='[none:Calculation_700872757516693506:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_700872757529178117]' derivation='None' name='[none:Calculation_700872757529178117:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_700872757532114952]' derivation='None' name='[none:Calculation_700872757532114952:nk]' pivot='key' type='nominal' />
+            <column caption='Tot Chol' datatype='integer' name='[totChol]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757516693506:nk]'>
+            <groupfilter function='level-members' level='[none:Calculation_700872757516693506:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757532114952:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Calculation_700872757532114952:nk]' member='&quot;HIGH&quot;' />
+              <groupfilter function='member' level='[none:Calculation_700872757532114952:nk]' member='&quot;NORMAL&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757516693506:nk]</column>
+            <column>[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757532114952:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757532114952:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0akp0qs13baed51dunbpz1brc1w1].[cnt:TenYearCHD:qk]</rows>
+        <cols>[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757529178117:nk]</cols>
+      </table>
+      <simple-id uuid='{E6AC3CE4-12BE-4D05-B277-D2E016C40F57}' />
+    </worksheet>
+    <worksheet name='Q4.1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dataset-framingham-heart-study' name='federated.0akp0qs13baed51dunbpz1brc1w1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0akp0qs13baed51dunbpz1brc1w1'>
+            <column datatype='real' name='[BMI]' role='measure' type='quantitative' />
+            <column caption='Gender' datatype='string' name='[Calculation_700872757516693506]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [male] = 1 THEN &quot;Male&quot; ELSE &quot;Female&quot; END' />
+            </column>
+            <column caption='BMI Category' datatype='string' name='[Calculation_700872757525819396]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [BMI] &lt; 18.5 THEN &quot;Underweight&quot;&#13;&#10;ELSEIF [BMI] &lt; 25 THEN &quot;Normal&quot;&#13;&#10;ELSEIF [BMI] &lt; 30 THEN &quot;Overweight&quot;&#13;&#10;ELSE &quot;Obese&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Ten Year CHD' datatype='integer' name='[TenYearCHD]' role='measure' type='quantitative' />
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[TenYearCHD]' derivation='Count' name='[cnt:TenYearCHD:qk]' pivot='key' type='quantitative' />
+            <column caption='Male' datatype='integer' name='[male]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_700872757516693506]' derivation='None' name='[none:Calculation_700872757516693506:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_700872757525819396]' derivation='None' name='[none:Calculation_700872757525819396:nk]' pivot='key' type='nominal' />
+            <column-instance column='[age]' derivation='None' name='[none:age:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:age:qk]' included-values='in-range'>
+            <min>32</min>
+            <max>54</max>
+          </filter>
+          <slices>
+            <column>[federated.0akp0qs13baed51dunbpz1brc1w1].[none:age:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757525819396:nk]' value='229' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757516693506:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0akp0qs13baed51dunbpz1brc1w1].[cnt:TenYearCHD:qk]</rows>
+        <cols>[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757525819396:nk]</cols>
+      </table>
+      <simple-id uuid='{18B9E73D-4AAD-4D4D-90FE-F14B84F2C208}' />
+    </worksheet>
+    <worksheet name='Q4.2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dataset-framingham-heart-study' name='federated.0akp0qs13baed51dunbpz1brc1w1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0akp0qs13baed51dunbpz1brc1w1'>
+            <column caption='Gender' datatype='string' name='[Calculation_700872757516693506]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [male] = 1 THEN &quot;Male&quot; ELSE &quot;Female&quot; END' />
+            </column>
+            <column caption='High Blood Pressure' datatype='string' name='[Calculation_700872757524488195]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [sysBP] &gt; 140 OR [diaBP] &gt; 90 THEN &quot;Yes&quot; ELSE &quot;No&quot; END' />
+            </column>
+            <column caption='Ten Year CHD' datatype='integer' name='[TenYearCHD]' role='measure' type='quantitative' />
+            <column caption='Current Smoker' datatype='integer' name='[currentSmoker]' role='measure' type='quantitative' />
+            <column caption='Dia BP' datatype='real' name='[diaBP]' role='measure' type='quantitative' />
+            <column caption='Male' datatype='integer' name='[male]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_700872757516693506]' derivation='None' name='[none:Calculation_700872757516693506:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_700872757524488195]' derivation='None' name='[none:Calculation_700872757524488195:nk]' pivot='key' type='nominal' />
+            <column-instance column='[currentSmoker]' derivation='None' name='[none:currentSmoker:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[TenYearCHD]' derivation='Sum' name='[sum:TenYearCHD:qk]' pivot='key' type='quantitative' />
+            <column caption='Sys BP' datatype='real' name='[sysBP]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:currentSmoker:ok]'>
+            <groupfilter function='level-members' level='[none:currentSmoker:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0akp0qs13baed51dunbpz1brc1w1].[none:currentSmoker:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757524488195:nk]' value='166' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757516693506:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0akp0qs13baed51dunbpz1brc1w1].[sum:TenYearCHD:qk]</rows>
+        <cols>[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757524488195:nk]</cols>
+      </table>
+      <simple-id uuid='{C1881726-36EC-4B6B-9D70-794DAB9D16A1}' />
+    </worksheet>
+    <worksheet name='Q4.3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dataset-framingham-heart-study' name='federated.0akp0qs13baed51dunbpz1brc1w1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0akp0qs13baed51dunbpz1brc1w1'>
+            <column caption='Gender' datatype='string' name='[Calculation_700872757516693506]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [male] = 1 THEN &quot;Male&quot; ELSE &quot;Female&quot; END' />
+            </column>
+            <column caption='Age Group' datatype='string' name='[Calculation_700872757529178117]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [age] &lt; 40 THEN &quot;20-39&quot;&#13;&#10;ELSEIF [age] &gt;= 40 AND [age] &lt; 60 THEN &quot;40-59&quot;&#13;&#10;ELSE &quot;60+&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Ten Year CHD' datatype='integer' name='[TenYearCHD]' role='measure' type='quantitative' />
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[TenYearCHD]' derivation='Count' name='[cnt:TenYearCHD:qk]' pivot='key' type='quantitative' />
+            <column caption='Current Smoker' datatype='integer' name='[currentSmoker]' role='measure' type='quantitative' />
+            <column caption='Diabetes' datatype='integer' name='[diabetes]' role='measure' type='quantitative' />
+            <column caption='Heart Rate' datatype='integer' name='[heartRate]' role='measure' type='quantitative' />
+            <column caption='Male' datatype='integer' name='[male]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_700872757516693506]' derivation='None' name='[none:Calculation_700872757516693506:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_700872757529178117]' derivation='None' name='[none:Calculation_700872757529178117:nk]' pivot='key' type='nominal' />
+            <column-instance column='[currentSmoker]' derivation='None' name='[none:currentSmoker:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[diabetes]' derivation='None' name='[none:diabetes:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[heartRate]' derivation='None' name='[none:heartRate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:currentSmoker:qk]' included-values='in-range'>
+            <min>0</min>
+            <max>1</max>
+          </filter>
+          <filter class='quantitative' column='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:diabetes:qk]' included-values='in-range'>
+            <min>0</min>
+            <max>1</max>
+          </filter>
+          <filter class='quantitative' column='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:heartRate:qk]' included-values='in-range'>
+            <min>44</min>
+            <max>143</max>
+          </filter>
+          <slices>
+            <column>[federated.0akp0qs13baed51dunbpz1brc1w1].[none:diabetes:qk]</column>
+            <column>[federated.0akp0qs13baed51dunbpz1brc1w1].[none:currentSmoker:qk]</column>
+            <column>[federated.0akp0qs13baed51dunbpz1brc1w1].[none:heartRate:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757529178117:nk]' value='145' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757516693506:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0akp0qs13baed51dunbpz1brc1w1].[cnt:TenYearCHD:qk]</rows>
+        <cols>[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757529178117:nk]</cols>
+      </table>
+      <simple-id uuid='{CC115929-B34D-4499-BE57-7C87D2FC97D7}' />
+    </worksheet>
+    <worksheet name='Sheet 10'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dataset-framingham-heart-study' name='federated.0akp0qs13baed51dunbpz1brc1w1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0akp0qs13baed51dunbpz1brc1w1'>
+            <column caption='Ten Year CHD' datatype='integer' name='[TenYearCHD]' role='measure' type='quantitative' />
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[TenYearCHD]' derivation='Count' name='[cnt:TenYearCHD:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[age]' derivation='None' name='[none:age:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0akp0qs13baed51dunbpz1brc1w1].[cnt:TenYearCHD:qk]</rows>
+        <cols>[federated.0akp0qs13baed51dunbpz1brc1w1].[none:age:qk]</cols>
+      </table>
+      <simple-id uuid='{508775E7-799F-4ECC-A8C0-8F26E6275D67}' />
+    </worksheet>
+    <worksheet name='Sheet 11'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dataset-framingham-heart-study' name='federated.0akp0qs13baed51dunbpz1brc1w1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0akp0qs13baed51dunbpz1brc1w1'>
+            <column caption='Ten Year CHD' datatype='integer' name='[TenYearCHD]' role='measure' type='quantitative' />
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column caption='Avg Heart Disease Rate' datatype='real' name='[avg_heart_disease_rate]' role='measure' type='quantitative' />
+            <column-instance column='[TenYearCHD]' derivation='Count' name='[cnt:TenYearCHD:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[age]' derivation='None' name='[none:age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[avg_heart_disease_rate]' derivation='None' name='[none:avg_heart_disease_rate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:age:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:avg_heart_disease_rate:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0akp0qs13baed51dunbpz1brc1w1].[cnt:TenYearCHD:qk]</rows>
+        <cols>([federated.0akp0qs13baed51dunbpz1brc1w1].[none:age:qk] + [federated.0akp0qs13baed51dunbpz1brc1w1].[none:avg_heart_disease_rate:qk])</cols>
+      </table>
+      <simple-id uuid='{5F3BC7E1-7304-46AA-B09E-3CF3312E56C1}' />
+    </worksheet>
+    <worksheet name='bar graph'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Bar Graph</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dataset-framingham-heart-study' name='federated.0akp0qs13baed51dunbpz1brc1w1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0akp0qs13baed51dunbpz1brc1w1'>
+            <column aggregation='None' datatype='integer' name='[Age (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='3.3' />
+            </column>
+            <column caption='Ten Year CHD' datatype='integer' name='[TenYearCHD]' role='measure' type='quantitative' />
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[TenYearCHD]' derivation='Count' name='[cnt:TenYearCHD:qk]' pivot='key' type='quantitative' />
+            <column caption='Male' datatype='integer' name='[male]' role='measure' type='quantitative' />
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[male]' derivation='None' name='[none:male:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:male:ok]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#757575'>Age (bin):&#9;</run>
+                <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Times New Roman' fontsize='16'><![CDATA[<[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Age (bin):ok]>]]></run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#757575'>Count of Ten Year CHD:&#9;</run>
+                <run bold='true' fontalignment='1' fontcolor='#e15759' fontname='Times New Roman' fontsize='12'><![CDATA[<[federated.0akp0qs13baed51dunbpz1brc1w1].[cnt:TenYearCHD:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='cell'>
+                <format attr='wrap' value='on' />
+                <format attr='text-orientation' value='0' />
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-family' value='Tableau Book' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#ff9d9a' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#ffffff' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0akp0qs13baed51dunbpz1brc1w1].[cnt:TenYearCHD:qk]</rows>
+        <cols>[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Age (bin):ok]</cols>
+        <show-full-range>
+          <column>[federated.0akp0qs13baed51dunbpz1brc1w1].[Age (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{224C4EE5-D94E-4506-9801-52D9127DDB6C}' />
+    </worksheet>
+    <worksheet name='dual axis'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Dual Axis</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dataset-framingham-heart-study' name='federated.0akp0qs13baed51dunbpz1brc1w1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0akp0qs13baed51dunbpz1brc1w1'>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[cigsPerDay]' derivation='Avg' name='[avg:cigsPerDay:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[heartRate]' derivation='Avg' name='[avg:heartRate:qk]' pivot='key' type='quantitative' />
+            <column caption='Cigs Per Day' datatype='integer' name='[cigsPerDay]' role='dimension' type='quantitative' />
+            <column caption='Heart Rate' datatype='integer' name='[heartRate]' role='measure' type='quantitative' />
+            <column-instance column='[age]' derivation='None' name='[none:age:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0akp0qs13baed51dunbpz1brc1w1].[avg:heartRate:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0akp0qs13baed51dunbpz1brc1w1].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0akp0qs13baed51dunbpz1brc1w1].[avg:cigsPerDay:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0akp0qs13baed51dunbpz1brc1w1].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575'>Age:&#9;</run>
+                <run bold='true' fontsize='14'><![CDATA[<[federated.0akp0qs13baed51dunbpz1brc1w1].[none:age:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>Avg. Cigs Per Day:&#9;</run>
+                <run bold='true' fontcolor='#e15759' fontsize='12'><![CDATA[<[federated.0akp0qs13baed51dunbpz1brc1w1].[avg:cigsPerDay:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0akp0qs13baed51dunbpz1brc1w1].[avg:heartRate:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0akp0qs13baed51dunbpz1brc1w1].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575'>Age:&#9;</run>
+                <run bold='true' fontsize='14'><![CDATA[<[federated.0akp0qs13baed51dunbpz1brc1w1].[none:age:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>Avg. Heart Rate:&#9;</run>
+                <run bold='true' fontcolor='#e15759' fontsize='12'><![CDATA[<[federated.0akp0qs13baed51dunbpz1brc1w1].[avg:heartRate:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f9a655' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='size' value='0.91154694557189941' />
+                <format attr='mark-labels-mode' value='line-ends' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0akp0qs13baed51dunbpz1brc1w1].[avg:cigsPerDay:qk] + [federated.0akp0qs13baed51dunbpz1brc1w1].[avg:heartRate:qk])</rows>
+        <cols>[federated.0akp0qs13baed51dunbpz1brc1w1].[none:age:qk]</cols>
+      </table>
+      <simple-id uuid='{EF0DE724-C6A8-4D3C-B72E-E8985F00B671}' />
+    </worksheet>
+    <worksheet name='line chart'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Line Chart</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dataset-framingham-heart-study' name='federated.0akp0qs13baed51dunbpz1brc1w1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0akp0qs13baed51dunbpz1brc1w1'>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[heartRate]' derivation='Avg' name='[avg:heartRate:qk]' pivot='key' type='quantitative' />
+            <column caption='Heart Rate' datatype='integer' name='[heartRate]' role='measure' type='quantitative' />
+            <column caption='Male' datatype='integer' name='[male]' role='measure' type='quantitative' />
+            <column-instance column='[age]' derivation='None' name='[none:age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[male]' derivation='None' name='[none:male:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:male:ok]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575'>Age:&#9;</run>
+                <run bold='true' fontsize='14'><![CDATA[<[federated.0akp0qs13baed51dunbpz1brc1w1].[none:age:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>Avg. Heart Rate:&#9;</run>
+                <run bold='true' fontcolor='#f17b79' fontsize='12'><![CDATA[<[federated.0akp0qs13baed51dunbpz1brc1w1].[avg:heartRate:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#e15759' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='line-ends' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0akp0qs13baed51dunbpz1brc1w1].[avg:heartRate:qk]</rows>
+        <cols>[federated.0akp0qs13baed51dunbpz1brc1w1].[none:age:qk]</cols>
+      </table>
+      <simple-id uuid='{B5A22D84-2EC4-4A61-9320-240411EED5AF}' />
+    </worksheet>
+    <worksheet name='pie chart'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dataset-framingham-heart-study' name='federated.0akp0qs13baed51dunbpz1brc1w1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0akp0qs13baed51dunbpz1brc1w1'>
+            <column datatype='real' name='[BMI]' role='measure' type='quantitative' />
+            <column caption='BMI Category' datatype='string' name='[Calculation_700872757525819396]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [BMI] &lt; 18.5 THEN &quot;Underweight&quot;&#13;&#10;ELSEIF [BMI] &lt; 25 THEN &quot;Normal&quot;&#13;&#10;ELSEIF [BMI] &lt; 30 THEN &quot;Overweight&quot;&#13;&#10;ELSE &quot;Obese&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Ten Year CHD' datatype='integer' name='[TenYearCHD]' role='measure' type='quantitative' />
+            <column-instance column='[TenYearCHD]' derivation='Count' name='[cnt:TenYearCHD:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_700872757525819396]' derivation='None' name='[none:Calculation_700872757525819396:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757525819396:nk]' />
+              <size column='[federated.0akp0qs13baed51dunbpz1brc1w1].[cnt:TenYearCHD:qk]' />
+              <lod column='[federated.0akp0qs13baed51dunbpz1brc1w1].[cnt:TenYearCHD:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575'>BMI Category:&#9;</run>
+                <run bold='true' fontsize='14'><![CDATA[<[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757525819396:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>Count of Ten Year CHD:&#9;</run>
+                <run bold='true' fontcolor='#e15759' fontsize='12'><![CDATA[<[federated.0akp0qs13baed51dunbpz1brc1w1].[cnt:TenYearCHD:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='bottom' />
+                <format attr='wrap' value='on' />
+                <format attr='text-orientation' value='0' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='2' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{7336F779-B5A7-4AFA-BF5A-1D73033C9923}' />
+    </worksheet>
+    <worksheet name='pieChart'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dataset-framingham-heart-study' name='federated.0akp0qs13baed51dunbpz1brc1w1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0akp0qs13baed51dunbpz1brc1w1'>
+            <column datatype='real' name='[BMI]' role='measure' type='quantitative' />
+            <column caption='BMI Category' datatype='string' name='[Calculation_700872757525819396]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [BMI] &lt; 18.5 THEN &quot;Underweight&quot;&#13;&#10;ELSEIF [BMI] &lt; 25 THEN &quot;Normal&quot;&#13;&#10;ELSEIF [BMI] &lt; 30 THEN &quot;Overweight&quot;&#13;&#10;ELSE &quot;Obese&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Ten Year CHD' datatype='integer' name='[TenYearCHD]' role='measure' type='quantitative' />
+            <column-instance column='[TenYearCHD]' derivation='Count' name='[cnt:TenYearCHD:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_700872757525819396]' derivation='None' name='[none:Calculation_700872757525819396:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757525819396:nk]' />
+              <lod column='[federated.0akp0qs13baed51dunbpz1brc1w1].[cnt:TenYearCHD:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{C4CA7A63-E98F-4578-95A0-55382E885D91}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 2'>
+      <style />
+      <size maxheight='1460' maxwidth='1220' minheight='1460' minwidth='820' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98904' id='5' param='horz' type-v2='layout-flow' w='98688' x='656' y='548'>
+            <zone h='98904' id='1' param='vert' type-v2='layout-flow' w='57366' x='656' y='548'>
+              <zone h='98904' id='3' name='bar graph' w='57366' x='656' y='548'>
+                <layout-cache minheight='195' type-h='scalable' type-w='cell' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='504' h='98904' id='4' is-fixed='true' param='vert' type-v2='layout-flow' w='41311' x='58022' y='548' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='4384' id='6' name='bar graph' pane-specification-id='3' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:male:ok]' type-v2='color' w='7131' x='48361' y='1096' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones />
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{6E49D0E6-E882-40F5-B546-8768A96EF0AD}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 3'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource name='Parameters' />
+        <datasource caption='dataset-framingham-heart-study' name='federated.0akp0qs13baed51dunbpz1brc1w1' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Cholesterol Limit' datatype='integer' name='[Tot Chol Parameter]' param-domain-type='range' role='measure' type='quantitative' value='247'>
+          <calculation class='tableau' formula='247' />
+          <range granularity='10' max='696' min='107' />
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.0akp0qs13baed51dunbpz1brc1w1'>
+        <column caption='Gender' datatype='string' name='[Calculation_700872757516693506]' role='dimension' type='nominal'>
+          <calculation class='tableau' formula='IF [male] = 1 THEN &quot;Male&quot; ELSE &quot;Female&quot; END' />
+        </column>
+        <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+        <column-instance column='[Calculation_700872757516693506]' derivation='None' name='[none:Calculation_700872757516693506:nk]' pivot='key' type='nominal' />
+        <column-instance column='[age]' derivation='None' name='[none:age:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='39632' id='8' param='horz' type-v2='layout-flow' w='10259' x='28353' y='10349'>
+            <zone fixed-size='160' h='39632' id='7' is-fixed='true' param='vert' type-v2='layout-flow' w='10259' x='28353' y='10349'>
+              <zone h='13109' id='17' name='Q2.2' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757516693506:nk]' type-v2='filter' w='10259' x='28353' y='10349'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9863' id='19' mode='slider' param='[Parameters].[Tot Chol Parameter]' type-v2='paramctrl' w='10259' x='28353' y='23458'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='48982' id='10' name='line chart' w='28180' x='40551' y='999'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='45075' id='11' name='dual axis' w='38129' x='483' y='53926'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='45075' id='13' name='2nd grouping filtering (Q2.1)' w='28180' x='40551' y='53926'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='48982' id='16' name='Q2.2' w='27870' x='483' y='999'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='37969' id='22' name='Q4.1' show-title='false' w='28851' x='70666' y='61032'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='7106' id='15' name='2nd grouping filtering (Q2.1)' pane-specification-id='0' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757516693506:nk]' type-v2='color' w='14783' x='70666' y='53926'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='48982' id='6' name='bar graph' w='28853' x='70664' y='999'>
+            <layout-cache minheight='195' type-h='scalable' type-w='cell' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='7106' id='24' param='horz' type-v2='layout-flow' w='14068' x='85449' y='53926'>
+            <zone h='7106' id='23' name='Q4.1' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:age:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='14068' x='85449' y='53926'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='9350' id='18' name='Q2.2' pane-specification-id='3' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757532114952:nk]' type-v2='color' w='10259' x='28353' y='999'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='48982' id='27' param='horz' type-v2='layout-flow' w='1939' x='38612' y='999'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='background-color' value='#f5f5f5' />
+            </zone-style>
+          </zone>
+          <zone h='49020' id='28' param='horz' type-v2='layout-flow' w='1939' x='38612' y='49981'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='background-color' value='#f5f5f5' />
+            </zone-style>
+          </zone>
+          <zone h='48982' id='29' param='horz' type-v2='layout-flow' w='1933' x='68731' y='999'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='background-color' value='#f5f5f5' />
+            </zone-style>
+          </zone>
+          <zone h='49020' id='30' param='horz' type-v2='layout-flow' w='1935' x='68731' y='49981'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='background-color' value='#f5f5f5' />
+            </zone-style>
+          </zone>
+          <zone h='3945' id='31' param='vert' type-v2='layout-flow' w='38129' x='483' y='49981'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='background-color' value='#f5f5f5' />
+            </zone-style>
+          </zone>
+          <zone h='3945' id='32' param='vert' type-v2='layout-flow' w='28180' x='40551' y='49981'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='background-color' value='#f5f5f5' />
+            </zone-style>
+          </zone>
+          <zone h='3945' id='33' param='vert' type-v2='layout-flow' w='14783' x='70666' y='49981'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='background-color' value='#c0c0c0' />
+            </zone-style>
+          </zone>
+          <zone h='3945' id='34' param='vert' type-v2='layout-flow' w='14068' x='85449' y='49981'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='background-color' value='#d4d4d4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='3371' id='12' name='dual axis' pane-specification-id='1' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[:Measure Names]' type-v2='color' w='32046' x='8570' y='55431' />
+        <zone h='5243' id='14' name='2nd grouping filtering (Q2.1)' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:age:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='15932' x='52625' y='55556' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2200' minheight='2200' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='42' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98002' id='41' param='vert' type-v2='layout-flow' w='99034' x='483' y='999'>
+                <zone h='13109' id='17' mode='checkdropdown' name='Q2.2' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757516693506:nk]' type-v2='filter' w='10259' x='28353' y='10349'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48982' id='16' is-fixed='true' name='Q2.2' w='27870' x='483' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9350' id='18' name='Q2.2' pane-specification-id='3' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757532114952:nk]' type-v2='color' w='10259' x='28353' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48982' id='10' is-fixed='true' name='line chart' w='28180' x='40551' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48982' id='6' is-fixed='true' name='bar graph' w='28853' x='70664' y='999'>
+                  <layout-cache minheight='195' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9863' id='19' mode='slider' param='[Parameters].[Tot Chol Parameter]' type-v2='paramctrl' w='10259' x='28353' y='23458'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45075' id='11' is-fixed='true' name='dual axis' w='38129' x='483' y='53926'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3371' id='12' name='dual axis' pane-specification-id='1' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[:Measure Names]' type-v2='color' w='32046' x='8570' y='55431'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5243' id='14' name='2nd grouping filtering (Q2.1)' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:age:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='15932' x='52625' y='55556'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45075' id='13' is-fixed='true' name='2nd grouping filtering (Q2.1)' w='28180' x='40551' y='53926'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7106' id='15' name='2nd grouping filtering (Q2.1)' pane-specification-id='0' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757516693506:nk]' type-v2='color' w='14783' x='70666' y='53926'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7106' id='23' name='Q4.1' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:age:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='14068' x='85449' y='53926'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37969' id='22' is-fixed='true' name='Q4.1' show-title='false' w='28851' x='70666' y='61032'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{6CCD090D-2203-40A3-A097-1BC1741B2F15}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='worksheet' name='bar graph'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:male:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{762AAF04-2EA4-4F6B-BF98-ADBD9EB57E9C}' />
+    </window>
+    <window class='worksheet' name='line chart'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:male:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9E31349C-4948-47A8-926C-969008769C20}' />
+    </window>
+    <window class='worksheet' name='dual axis'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B2B79DF7-1DA5-4AD3-A600-A6C72B7B6DF9}' />
+    </window>
+    <window class='worksheet' name='2nd grouping filtering (Q2.1)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:age:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757516693506:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B8228317-8F5B-4191-A6B0-51626B8BD7C2}' />
+    </window>
+    <window class='worksheet' name='Q2.2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757516693506:nk]' type='filter' />
+            <card pane-specification-id='3' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757532114952:nk]' type='color' />
+            <card mode='slider' param='[Parameters].[Tot Chol Parameter]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A9E2E5DB-A28B-4D24-BF38-3E6AC480F0E8}' />
+    </window>
+    <window class='worksheet' name='Q4.1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:age:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757516693506:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C69436D3-A62C-4928-AACA-49254F36E3EA}' />
+    </window>
+    <window class='worksheet' name='Q4.2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:currentSmoker:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757516693506:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{09A604E9-2050-48D0-9495-D974A8F0F9CC}' />
+    </window>
+    <window class='worksheet' name='Q4.3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:heartRate:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:currentSmoker:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:diabetes:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757516693506:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{63BD24DA-62CD-417E-81B3-DA65C896EBFC}' />
+    </window>
+    <window class='worksheet' name='pie chart'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='152'>
+            <card pane-specification-id='0' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757525819396:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[cnt:TenYearCHD:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0B4FA94A-18E2-4B56-A504-F2C7264B4CB9}' />
+    </window>
+    <window class='worksheet' name='Sheet 10'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1928F1FC-8783-49D3-85EC-044ABDF49F12}' />
+    </window>
+    <window class='worksheet' name='Sheet 11'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F0CC3553-DF56-46FA-A26B-6AD2D84EE851}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='bar graph'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{0621BC60-C285-4372-B105-2E3C40E5FD7A}' />
+    </window>
+    <window class='dashboard' name='Dashboard 3'>
+      <viewpoints>
+        <viewpoint name='2nd grouping filtering (Q2.1)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Q2.2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Q4.1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='bar graph'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='dual axis'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='line chart'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='34' />
+      <simple-id uuid='{A19D577A-FB5F-4081-AD69-9CA901ECD786}' />
+    </window>
+    <window class='worksheet' name='pieChart'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0akp0qs13baed51dunbpz1brc1w1].[none:Calculation_700872757525819396:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BF875ABC-0A8F-4C2D-8F79-9079C104A24C}' />
+    </window>
+  </windows>
+</workbook>
