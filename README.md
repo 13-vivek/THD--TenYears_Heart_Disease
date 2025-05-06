@@ -91,6 +91,5 @@ To develop a machine learning-based predictive system that can estimate an indiv
 
 ---
 
-## ✅ Conclusion
 
 The XGBoost-based model demonstrated high accuracy and consistent predictions, making it a reliable decision-support tool for early detection of coronary heart disease. By providing actionable insights and early warnings, this project contributes meaningfully to preventive healthcare.
