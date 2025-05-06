@@ -23,14 +23,8 @@ To develop a machine learning-based predictive system that can estimate an indiv
 
 ##  Technologies Used
 
-- Python  
-- XGBoost  
-- Random Forest  
-- Scikit-learn  
-- Pandas, NumPy  
-- Matplotlib, Seaborn  
-- Streamlit (for dashboard)
-
+- R Studio     
+- Shiny Library for user interface
 ---
 
 ##  Project Pipeline
@@ -57,7 +51,7 @@ To develop a machine learning-based predictive system that can estimate an indiv
   - **F1-Score**
 
 ### 5. **Interactive Dashboard**
-- Built using **Streamlit**
+- Built using **Shiny**
 - Clinicians can input patient data to predict CHD risk instantly
 
 ### 6. **Clinical Application**
