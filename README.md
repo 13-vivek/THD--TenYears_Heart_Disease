@@ -89,5 +89,5 @@ To develop a machine learning-based predictive system that can estimate an indiv
 The XGBoost-based model demonstrated high accuracy and consistent predictions, making it a reliable decision-support tool for early detection of coronary heart disease. By providing actionable insights and early warnings, this project contributes meaningfully to preventive healthcare.
 
 ## Here is the Tableau dashboard :-
-![image](https://github.com/user-attachments/assets/c14ce798-b09c-492d-9799-f9ace68c105d)
+![dashboard](https://github.com/user-attachments/assets/6140ee88-009c-4c7f-9ffe-82ed8e0a48f7)
 
